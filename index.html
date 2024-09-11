@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <form id="searchForm">
+            <h1>Movie App</h1>
+            <input type="text" id="query" placeholder="Enter movie title or part of it" required onkeyup="findMovies()">
+            <select id="type">
+                <option value="">Type</option>
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+            </select>
+            <button type="submit" id="btn">Search</button>
+            <div class="result"></div>
+        </form>
+    
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 id="modalTitle"></h2>
+              <p id="modalYear"></p>
+              <p id="modalType"></p>
+              <img id="modalPoster" src="" alt="">
+              <p id="modalPlot"></p>
+              <form id="ratingForm">
+                <label for="rating">Rate this movie:</label>
+                <input type="number" id="rating" min="1" max="10">
+                <button type="submit">Submit Rating</button>
+              </form>
+              <p id="averageRating"></p>
+            </div>
+          </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
